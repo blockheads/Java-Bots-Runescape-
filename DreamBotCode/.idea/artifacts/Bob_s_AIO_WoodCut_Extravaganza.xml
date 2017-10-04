@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Bob's AIO WoodCut Extravaganza">
+    <output-path>$USER_HOME$/DreamBot/Scripts</output-path>
+    <root id="archive" name="Bob's AIO WoodCut Extravaganza.jar">
+      <element id="module-output" name="DreamBotScripts" />
+    </root>
+  </artifact>
+</component>

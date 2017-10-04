@@ -1,0 +1,161 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_101" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "this"
+			"title": "AIO WoodCutter"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Start"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 245
+				"y": 195
+				"width": 105
+				"height": 60
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "TreeSelector"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Tree"
+					addElement( "Tree" )
+					addElement( "Oak" )
+					addElement( "Willow" )
+					addElement( "Maple" )
+					addElement( "Achey" )
+					addElement( "Yew" )
+					addElement( "Magic" )
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 20
+				"y": 40
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Tree Type Select"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 20
+				"y": 10
+				"width": 90
+				"height": 25
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Bounding Box Height"
+				"toolTipText": "The bounding box tells the script how high and low you want the bot to go to look for trees. IE a value of 20 would look 10 high and 10 below the bot for trees"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 120
+				"height": 16
+				"x": 190
+				"y": 45
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Range Size"
+				"toolTipText": "How far away from the player distance wise should the bot seach for trees within the bounded area"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 245
+				"y": 105
+				"height": 16
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Bounding Box Width"
+				"toolTipText": "The bounding box width tells the script how far left and right you want the bot to go to look for trees. IE a value of 20 would look 10 to the right and 10 to the left"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 120
+				"height": 16
+				"x": 195
+				"y": 75
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Advanced options (hover option for tooltip)"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 145
+				"y": 10
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "BoundingBoxHeight"
+				"model": &SpinnerNumberModel0 new javax.swing.SpinnerNumberModel( 20, 4, 40, 2 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 320
+				"y": 40
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "BoundingBoxWidth"
+				"model": #SpinnerNumberModel0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 52
+				"height": 26
+				"x": 320
+				"y": 70
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "RangeSize"
+				"model": new javax.swing.SpinnerNumberModel( 20, 4, 40, 1 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 52
+				"height": 26
+				"x": 320
+				"y": 100
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Threshold Range"
+				"toolTipText": "The threshold range tells the script what the largest possible value of the distance from the player to a tree is to be possibly selected by a random generation. I can't explain this better just leave it at 3 if you are confused"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 95
+				"height": 16
+				"x": 220
+				"y": 135
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "ThresholdRange"
+				"model": new javax.swing.SpinnerNumberModel( 3, 1, 10, 1 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 52
+				"height": 26
+				"x": 320
+				"y": 130
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "How to use this bot"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 55
+				"y": 90
+				"width": 110
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "textPane1"
+					"text": "In order to use this bot, first equip a axe and simply move to a area with the type of trees you want to cut and go to the center of the location. Once done you can change the advance settings to better fit the area(hover over them for tooltips on what they do), or just leave them as is and simply start up the bot. The bot will automatically collect wood based on the ranges you set up and bank automatically."
+					"editable": false
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 15
+				"y": 115
+				"width": 200
+				"height": 135
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "CoryBox"
+				"text": "Cory"
+				"selected": true
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 105
+				"y": 40
+				"width": 60
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

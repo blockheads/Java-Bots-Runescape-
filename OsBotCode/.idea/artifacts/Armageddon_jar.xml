@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Armageddon:jar">
+    <output-path>$USER_HOME$/OSBot/Scripts</output-path>
+    <root id="archive" name="Armageddon.jar">
+      <element id="module-output" name="Armageddon" />
+      <element id="module-output" name="StateMachine" />
+      <element id="module-output" name="Base" />
+      <element id="extracted-dir" path="D:/OSBot/OSBot 2.4.76.jar" path-in-jar="/" />
+      <element id="module-output" name="Utilities" />
+    </root>
+  </artifact>
+</component>
